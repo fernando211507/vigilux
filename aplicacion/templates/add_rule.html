@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar URL</title>
+</head>
+<body>
+    <h1>Agregar reglas</h1>
+    <form method="post" action="{% url 'add_rule' %}">
+    {% csrf_token %}
+    <label for="destination_url">destino URL:</label>
+    <input type="url" name="destination_url" required>
+    <input type="checkbox" name="enabled" checked> Habilitado
+    <button type="submit">Agregar Regla</button>
+</form>
+
+    <a href="{% url 'list_rules' %}">Back to Rules List</a>
+</body>
+</html>

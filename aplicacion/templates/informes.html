@@ -1,0 +1,36 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<h1>Informe de Actividades</h1>
+
+<form method="get">
+    <label for="filtro">Filtrar por:</label>
+    <select name="filtro" id="filtro" onchange="this.form.submit()">
+        <option value="todos" {% if filtro == 'todos' %}selected{% endif %}>Todos</option>
+        <option value="bloquear" {% if filtro == 'bloquear' %}selected{% endif %}>Bloquear</option>
+        <option value="permitir" {% if filtro == 'permitir' %}selected{% endif %}>Permitir</option>
+        <option value="ping" {% if filtro == 'ping' %}selected{% endif %}>Ping</option>
+    </select>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Acción</th>
+            <th>Modelo Afectado</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for registro in registros %}
+        <tr>
+            <td>{{ registro.usuario }}</td>
+            <td>{{ registro.accion }}</td>
+            <td>{{ registro.modelo_afectado }}</td>
+            <td>{{ registro.fecha }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

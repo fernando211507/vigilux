@@ -1,0 +1,76 @@
+/* Fondo general de la página */
+body {
+    background: linear-gradient(135deg, #f6f5f5, #a1e2f4cd); /* Degradado diagonal */
+    color: #111111; /* Texto en negro */
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Sidebar */
+.sidebar {
+    background: linear-gradient(180deg, #718de4, #0f0f1a);  /* Degradado oscuro */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    
+}
+
+
+.nav-link {
+    color: #433535;  /* Color de enlaces inactivos */
+}
+
+/* Header */
+.navbar {
+    background-color: #faf8f8c2;
+}
+
+/* Caja de login flotante */
+ .login-box {
+    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    backdrop-filter: blur(10px); /* Desenfoque de fondo */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Bordes translúcidos */
+    box-shadow: 0 0 30px rgba(0, 132, 255, 0.6), 0 0 60px rgba(0, 132, 255, 0.4); /* Efecto de brillo */
+    border-radius: 12px;
+    padding: 30px;
+    width: 350px;
+    position: relative;
+    text-align: center;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.login-box img {
+    max-width: 200px; /* Ajusta según sea necesario */
+    height: auto;
+}
+
+
+/* Animación para simular el flotado */
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+
+@keyframes glitch-btn {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Responsividad */
+@media (max-width: 500px) {
+    .login-box {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+.my-custom-class {
+    background-color: #007bff; /* Cambia el color de fondo */
+    color: white; /* Cambia el color del texto */
+    padding: 10px 15px; /* Ajusta el relleno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.my-custom-class:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}

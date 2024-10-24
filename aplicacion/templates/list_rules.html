@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de reglas</title>
+</head>
+<body>
+    <h1>Lista de reglas</h1>
+   <ul>
+    {% for rule in rules %}
+        <li>{{ rule.destination_url }} - {% if rule.enabled %}Habilitado{% else %}Deshabilitado{% endif %}</li>
+    {% endfor %}
+</ul>
+    <a href="{% url 'add_rule' %}">Agregar reglas</a>
+</body>
+</html>

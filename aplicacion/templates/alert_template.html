@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de Pings</title>
+</head>
+<body>
+    <h1>Registros de Pings</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>IP</th>
+                <th>Mensaje</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ping in pings %}
+            <tr>
+                <td>{{ ping.timestamp }}</td>
+                <td>{{ ping.ip }}</td>
+                <td>{{ ping.mensaje }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

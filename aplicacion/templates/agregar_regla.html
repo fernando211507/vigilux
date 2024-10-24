@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Regla nftables</title>
+</head>
+<body>
+    <h1>Agregar Regla nftables</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Agregar Regla">
+    </form>
+    <a href="{% url 'rule_list' %}">Volver a la lista de reglas</a>
+</body>
+</html>

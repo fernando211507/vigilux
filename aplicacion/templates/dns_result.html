@@ -1,0 +1,13 @@
+<!-- templates/dns_result.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNS Result</title>
+</head>
+<body>
+    <h1>DNS Lookup Result</h1>
+    <p>Domain: {{ dns_query.domain }}</p>
+    <p>IP Address: {{ dns_query.ip_address }}</p>
+    <a href="{% url 'dns_lookup' %}">New Lookup</a>
+</body>
+</html>

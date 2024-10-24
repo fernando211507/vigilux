@@ -1,0 +1,21 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+    <!-- Sobrescribimos el botón "Ir" por "Eliminar" -->
+    <button type="submit" class="btn btn-danger" name="action" value="delete_selected">Eliminar</button>
+{% endblock %}
+
+{% block result_list %}
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="actions">
+            <!-- Cambiamos el filtro del dropdown para que diga "Seleccionar todo" -->
+            <select name="action">
+                <option value="all">Seleccionar todo</option>
+                <option value="delete_selected">Eliminar seleccionados</option>
+            </select>
+            <input type="submit" class="button" value="Eliminar">
+        </div>
+        {{ result_list }}
+    </form>
+{% endblock %}

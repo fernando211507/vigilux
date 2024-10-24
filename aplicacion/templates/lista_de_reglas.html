@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Reglas nftables</title>
+</head>
+<body>
+    <h1>Lista de Reglas nftables</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Puerto</th>
+                <th>Dominio</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rule in rules %}
+            <tr>
+                <td>{{ rule.port }}</td>
+                <td>{{ rule.domain }}</td>
+                <td>{{ rule.action }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'agregar_regla' %}">Agregar Regla</a>
+</body>
+</html>

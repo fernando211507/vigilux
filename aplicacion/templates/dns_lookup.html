@@ -1,0 +1,15 @@
+<!-- templates/dns_lookup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNS Lookup</title>
+</head>
+<body>
+    <h1>DNS Lookup</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Lookup</button>
+    </form>
+</body>
+</html>
